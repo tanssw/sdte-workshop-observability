@@ -13,7 +13,7 @@ const getUrlContents = (url) => {
 
 app.get('/dashboard', async (req, res) => {
   //Get data from service 2 :: Movies
-  const movies = await getUrlContents('http://localhost:3001/movies')
+  const movies = await getUrlContents('http://service2:3001/movies')
   res.type('json')
   res.send(JSON.stringify({ dashboard: movies }))
 })
